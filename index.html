@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Landing Page</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="fixed left-0 right-0 top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto flex items-center justify-between px-4 py-3">
+            <!-- Logo -->
+            <a href="#home">
+                <img src="images/logo.png" alt="Your Logo" class="h-10 w-full" />
+            </a>
+
+            <!-- Navbar links -->
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="text-gray-800 hover:text-blue-500">Home</a></li>
+                <li><a href="#products" class="text-gray-800 hover:text-blue-500">Products</a></li>
+                <li><a href="#about" class="text-gray-800 hover:text-blue-500">About</a></li>
+                <li><a href="#contact" class="text-gray-800 hover:text-blue-500">Contact</a></li>
+            </ul>
+
+            <!-- Cart Button -->
+
+            <a href="#cart" class="flex items-center text-grey">
+                <svg class="h-6 w-6 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M21 4H7a2 2 0 00-1.99 1.818L5.763 9H3a1 1 0 000 2h1v10a2 2 0 002 2h14a2 2 0 002-2V11h1a1 1 0 000-2h-2.763l-.247-3.182A2 2 0 0021 4zM7.473 9l-.258-3.169A1 1 0 016.245 5h11.51a1 1 0 01.03.002l.088.004a1 1 0 01.996.918L19.563 9H7.473z" />
+                    <circle cx="10.5" cy="19.5" r="1.5" />
+                    <circle cx="17.5" cy="19.5" r="1.5" />
+                </svg>
+                Cart
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-center bg-cover h-screen relative flex items-center justify-center"
+        style="background-image: url('images/hero-background.jpg');">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl">
+                <h2 class="text-4xl font-bold text-white mb-4">Welcome to Our <br>E-commerce Store</h2>
+                <p class="text-lg text-white mb-8">Shop the latest trends and discover the best deals in our online
+                    store.</p>
+                <!-- Search Bar -->
+                <div class="relative flex ">
+                    <input type="text" placeholder="Search for products"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400">
+                    <button type="submit" class="absolute right-0 top-0 mt-2 mr-2">
+                        <svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M10 18h4a2 2 0 002-2V8a2 2 0 00-2-2h-4a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M15 11l-3-3m0 0l-3 3m3-3v9"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- End of Search Bar -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Section -->
+    <section id="products" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="mb-8 text-3xl font-bold">Featured Products</h2>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <!-- Product Card 1 -->
+                <div
+                    class="transform rounded-lg bg-gray-100 p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <img src="images/products/product-1.jpg" alt="Product 1" class="mb-4 w-full rounded-lg" />
+                    <h3 class="mb-2 text-xl font-semibold">Product 1</h3>
+                    <p class="text-gray-700">Description of Product 1.</p>
+                    <p class="mt-4 font-bold text-blue-500">$19.99</p>
+                    <!-- Buy Now Button -->
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Buy
+                        Now</button>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                    class="transform rounded-lg bg-gray-100 p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <img src="images/products/product-2.jpg" alt="Product 2" class="mb-4 w-full rounded-lg" />
+                    <h3 class="mb-2 text-xl font-semibold">Product 2</h3>
+                    <p class="text-gray-700">Description of Product 2.</p>
+                    <p class="mt-4 font-bold text-blue-500">$24.99</p>
+                    <!-- Buy Now Button -->
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Buy
+                        Now</button>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                    class="transform rounded-lg bg-gray-100 p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <img src="images/products/product-3.jpg" alt="Product 3" class="mb-4 w-full rounded-lg" />
+                    <h3 class="mb-2 text-xl font-semibold">Product 3</h3>
+                    <p class="text-gray-700">Description of Product 3.</p>
+                    <p class="mt-4 font-bold text-blue-500">$29.99</p>
+                    <!-- Buy Now Button -->
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Buy
+                        Now</button>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div
+                    class="transform rounded-lg bg-gray-100 p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <img src="images/products/product-4.jpg" alt="Product 4" class="mb-4 w-full rounded-lg" />
+                    <h3 class="mb-2 text-xl font-semibold">Product 4</h3>
+                    <p class="text-gray-700">Description of Product 4.</p>
+                    <p class="mt-4 font-bold text-blue-500">$34.99</p>
+                    <!-- Buy Now Button -->
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Buy
+                        Now</button>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="mb-8 text-3xl font-bold">About Us</h2>
+            <p class="mb-8 text-lg text-gray-700">Welcome to our E-commerce store! We are a passionate team of
+                individuals who believe in providing the best products and shopping experience for our customers. Our
+                mission is to deliver high-quality products at competitive prices, straight to your doorstep.</p>
+
+            <div class="text-center">
+                <a href="#products"
+                    class="rounded-full bg-blue-500 px-8 py-3 font-bold text-white transition-colors hover:bg-blue-600">Shop
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="mb-8 text-3xl font-bold">Contact Us</h2>
+            <p class="mb-8 text-lg text-gray-700">Have a question or inquiry? Feel free to get in touch with us using
+                the contact form below. We'll get back to you as soon as possible.</p>
+
+            <form class="mx-auto max-w-md">
+                <div class="mb-4">
+                    <label for="name" class="mb-2 block font-semibold text-gray-700">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                        class="w-full rounded-lg border border-gray-400 px-4 py-2 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="mb-2 block font-semibold text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com"
+                        class="w-full rounded-lg border border-gray-400 px-4 py-2 focus:border-blue-500 focus:outline-none" />
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="mb-2 block font-semibold text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        class="w-full rounded-lg border border-gray-400 px-4 py-2 focus:border-blue-500 focus:outline-none"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="rounded-full bg-blue-500 px-8 py-3 font-bold text-white transition-colors hover:bg-blue-600">Send
+                        Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-white">
+        <div class="container mx-auto flex flex-col justify-between px-4 sm:flex-row">
+            <!-- Logo -->
+            <div class="mb-4 sm:mb-0">
+                <img src="images/logo.png" alt="Your Logo" class="h-10" />
+            </div>
+
+            <!-- Footer Links -->
+            <div class="flex flex-wrap justify-center space-y-2 sm:space-x-6 sm:space-y-0">
+                <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+                <a href="#products" class="text-gray-400 hover:text-white">Products</a>
+                <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                <a href="#privacy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="mt-4 flex justify-center space-x-4 sm:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Add your social media icon SVG here -->
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Add your social media icon SVG here -->
+                    </svg>
+                </a>
+                <!-- Add more social media links as needed -->
+            </div>
+        </div>
+        <!-- Copyright Text -->
+        <div class="mt-4 text-center">
+            <p>&copy; 2023 Your E-commerce Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
